@@ -1,0 +1,24 @@
+{
+    "root": true,
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": { "project": ["./tsconfig.json"] },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+       "no-self-compare": "warn",
+       "no-use-before-define": "error",
+       "complexity": ["warning", 10],
+       "consistent-return": "error",
+       "eqeqeq": "warn",
+       "max-depth": ["error", 3],
+       "max-params": ["warn", 3],
+       "no-eval": "error",
+       "no-implied-eval": "error"
+    },
+    "ignorePatterns": ["src/**/*.test.ts", "src/frontend/generated/*"]
+}
